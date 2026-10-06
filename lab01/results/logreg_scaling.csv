@@ -1,0 +1,3 @@
+features,lbfgs_iterations,converged,train_time_median_ms,test_accuracy
+unscaled (spec),1000,False,69.386,0.9415
+standardized,19,True,1.895,0.9883

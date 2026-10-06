@@ -7,3 +7,4 @@ PY=../.venv/bin/python
 "$PY" src/baseline.py
 "$PY" -W ignore src/measure.py
 "$PY" src/budget.py
+"$PY" src/extra_checks.py

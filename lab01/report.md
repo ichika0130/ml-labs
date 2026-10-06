@@ -25,6 +25,10 @@ The memory subprocess does not import PyTorch. These models never use it, and im
 
 **Budget check.** The memory requirement is the peak RSS while serving predictions. For a range such as Mobile 64–256 MB, a model "fits" if it needs no more than the lower bound, so it runs on every device in the class. It is "partial" if it needs no more than the upper bound, so it runs only on the larger devices. Latency and size are compared directly against their limits. All results are reproduced with `src/run_all.sh`.
 
+**Supplementary checks (beyond the spec).** These were run to test two claims in the conclusions. The graded baselines above are unchanged.
+1. 10-fold stratified cross-validation of both models on all 569 samples, to check whether the single-split accuracy gap is real.
+2. The same LogisticRegression trained on `StandardScaler` features (scaler fitted on the training split only), to explain its training time.
+
 ## 3. Results
 
 **Test accuracy** (`results/baseline_accuracy.csv`, 171 test samples)
@@ -61,8 +65,26 @@ Repeated runs were consistent. RandomForest training stayed between 45 and 48 ms
   - LogisticRegression is 30 weights plus one bias, about 124 bytes as float32. Its prediction is one dot product. Exported to C, it would fit every TinyML budget.
   - RandomForest has 100 trees with 3,138 nodes in total. Even its serialized file (284 KB) is larger than the TinyML size limit, so it would need far fewer or shallower trees first.
 
+**Supplementary: is the accuracy gap real?** (`results/cv_accuracy.csv`)
+
+| Model | Single split (171 test samples) | 10-fold CV, mean ± std |
+|---|---|---|
+| LogisticRegression | 0.9415 (161 correct) | 0.9526 ± 0.0249 |
+| RandomForest | 0.9357 (160 correct) | 0.9561 ± 0.0239 |
+
+On the single split the two models disagree on 9 test samples, but they make almost the same number of errors. Under cross-validation the ranking flips. In both cases the gap is far smaller than one standard deviation.
+
+**Supplementary: why LogisticRegression trains slowly** (`results/logreg_scaling.csv`, a separate run)
+
+| Features | L-BFGS iterations | Converged | Train time, median (ms) | Test accuracy |
+|---|---|---|---|---|
+| Unscaled (as specified) | 1000 (limit) | No | 69.39 | 0.9415 |
+| Standardized | 19 | Yes | 1.90 | 0.9883 |
+
+The unscaled training time here (69 ms) differs from the main table (58 ms). It comes from a separate run, which matches the run-to-run spread noted above.
+
 ## 4. Conclusions
 
-1. On this dataset the simple linear model does slightly better than the 100-tree forest (0.9415 vs 0.9357, one more correct test sample). It is also 264× smaller and about 46× faster per prediction. Extra model complexity did not buy accuracy here.
-2. For small classical models, the deployment bottleneck is the software stack rather than the model. About 116 MB of the 117 MB peak is the Python/scikit-learn runtime. To move down to Mobile or TinyML, the first thing to change is the runtime, for example exporting the model to C or ONNX, not the model itself.
-3. Training time can mislead. LogisticRegression trains no faster than the forest, because on unscaled features L-BFGS reaches the 1000-iteration limit without converging (scikit-learn raises a ConvergenceWarning). Its cost reflects optimizer behaviour, not model size. Medians over repeated runs were necessary, because individual LogisticRegression training runs ranged from 43 to 100 ms.
+1. **The two baselines are equally accurate, but their system costs are very different.** The 0.006 gap on the test split is one sample out of 171. Cross-validation reverses it, and in both cases it is well inside one standard deviation. At the same accuracy, LogisticRegression is 264× smaller (1.08 KB vs 284 KB) and about 46× faster per prediction (0.014 ms vs 0.64 ms). Its size is what keeps a TinyML port possible. When accuracy is tied, cost should decide the model.
+2. **For small classical models, the software stack is the deployment bottleneck, not the model.** About 116 MB of the ~117 MB peak is the Python/NumPy/scikit-learn runtime. The models themselves add less than 1 MB. This is why both models only partially fit Mobile and fail TinyML even though latency passes everywhere. Moving down a tier means replacing the runtime, for example by exporting the model to C or ONNX, not shrinking the model.
+3. **LogisticRegression's training cost comes from the optimizer, not the model.** On unscaled features, L-BFGS uses all 1000 iterations without converging, so training takes ~45–90 ms, no faster than a 100-tree forest. After standardizing, it converges in 19 iterations and trains in ~2 ms, about 30× faster, with higher test accuracy (0.9883). A timing number therefore reflects the whole pipeline, including preprocessing. It says little about model size unless the training setup is described with it.
