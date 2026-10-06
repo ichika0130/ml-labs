@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-# Reproduce every Lab 1 result. Run from anywhere with the repo's .venv activated.
+# Reproduce every Lab 1 result. Uses the repo's .venv; works from any directory.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-python src/print_versions.py | tee results/versions.txt
-python src/baseline.py
-python -W ignore src/measure.py
-python src/budget.py
+PY=../.venv/bin/python
+"$PY" src/print_versions.py | tee results/versions.txt
+"$PY" src/baseline.py
+"$PY" -W ignore src/measure.py
+"$PY" src/budget.py
