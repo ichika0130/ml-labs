@@ -1,0 +1,19 @@
+# Data (downloaded by scripts)
+data/
+
+# Environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Tool outputs
+mlruns/
+emissions.csv
+.pytest_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
