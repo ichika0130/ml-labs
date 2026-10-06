@@ -1,0 +1,9 @@
+model,target,memory,latency,size,verdict,failed_constraints
+LogisticRegression,Cloud,yes,yes,yes,yes,-
+LogisticRegression,Edge,yes,yes,yes,yes,-
+LogisticRegression,Mobile,partial,yes,yes,partial,-
+LogisticRegression,TinyML,no,yes,yes,no,memory
+RandomForest,Cloud,yes,yes,yes,yes,-
+RandomForest,Edge,yes,yes,yes,yes,-
+RandomForest,Mobile,partial,yes,yes,partial,-
+RandomForest,TinyML,no,yes,no,no,memory size
