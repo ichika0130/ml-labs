@@ -1,0 +1,5 @@
+width,batch,forward_median_us,backward_median_us,backward_over_forward,forward_matmul_only_us,backward_matmul_only_us,forward_matmul_mflops,backward_matmul_mflops,flop_ratio_bwd_over_fwd,forward_matmuls,backward_matmuls
+16,32,18.92,20.42,1.08,6.42,9.62,0.092,0.119,1.29,3,5
+16,1257,279.96,324.6,1.16,90.38,194.46,3.62,4.666,1.29,3,5
+64,32,62.21,65.73,1.06,28.13,43.71,0.565,0.868,1.54,3,5
+64,1257,601.75,1014.85,1.69,318.77,955.96,22.204,34.11,1.54,3,5

@@ -1,0 +1,3 @@
+width,output_shape,shape_ok,max_abs_rowsum_minus_1,rowsum_ok,initial_loss,ln10
+16,"(1257, 10)",True,4.44e-16,True,2.3026,2.3026
+64,"(1257, 10)",True,3.33e-16,True,2.3026,2.3026
