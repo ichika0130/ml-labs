@@ -1,0 +1,5 @@
+model,params,test_loss,test_accuracy,final_val_accuracy,train_seconds_total
+MLP,235146,0.3425,0.8772,0.8818,16.4
+CNN,20490,0.2975,0.892,0.8972,85.7
+Attention,71818,0.3991,0.8604,0.8652,75.3
+Attention (no positional embedding),70794,0.4454,0.8425,0.8522,80.8

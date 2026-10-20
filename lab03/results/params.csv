@@ -1,0 +1,4 @@
+model,torchinfo_params,trainable_params,in_target_100k_150k
+MLP,235146,235146,False
+CNN,20490,20490,False
+Attention,71818,71818,False

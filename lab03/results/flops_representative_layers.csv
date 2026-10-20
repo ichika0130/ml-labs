@@ -1,0 +1,4 @@
+type,layer,formula,hand_flops,thop_flops_default,thop_flops_with_mha_rule,thop_over_hand
+Linear,MLP Linear 784->256,2 x 784 x 256,401408,401408,401408,1.0
+Conv2d,CNN Conv2d 16->32 3x3 (14x14 out),2 x 3 x 3 x 16 x 32 x 14 x 14,1806336,1806336,1806336,1.0
+Attention,"Encoder self-attention (seq 16, d 64)",2*16*64*192 + 2*16^2*64 + 2*16^2*64 + 2*16*64*64,589824,0,589824,0.0

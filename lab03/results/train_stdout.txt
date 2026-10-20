@@ -1,0 +1,24 @@
+MLP                                    epoch 1  train_loss=0.4919  train_acc=0.8227  val_acc=0.8468  (2.9s)
+MLP                                    epoch 2  train_loss=0.3542  train_acc=0.8704  val_acc=0.8606  (4.3s)
+MLP                                    epoch 3  train_loss=0.3141  train_acc=0.8825  val_acc=0.8722  (3.2s)
+MLP                                    epoch 4  train_loss=0.2899  train_acc=0.8920  val_acc=0.8792  (3.0s)
+MLP                                    epoch 5  train_loss=0.2681  train_acc=0.9005  val_acc=0.8818  (3.0s)
+MLP                                    TEST acc=0.8772
+CNN                                    epoch 1  train_loss=0.5295  train_acc=0.8131  val_acc=0.8472  (15.8s)
+CNN                                    epoch 2  train_loss=0.3510  train_acc=0.8754  val_acc=0.8710  (16.2s)
+CNN                                    epoch 3  train_loss=0.3050  train_acc=0.8904  val_acc=0.8870  (15.9s)
+CNN                                    epoch 4  train_loss=0.2794  train_acc=0.9002  val_acc=0.8848  (19.3s)
+CNN                                    epoch 5  train_loss=0.2625  train_acc=0.9055  val_acc=0.8972  (18.6s)
+CNN                                    TEST acc=0.8920
+Attention                              epoch 1  train_loss=0.7649  train_acc=0.7334  val_acc=0.8154  (15.5s)
+Attention                              epoch 2  train_loss=0.4743  train_acc=0.8271  val_acc=0.8194  (14.9s)
+Attention                              epoch 3  train_loss=0.4166  train_acc=0.8470  val_acc=0.8506  (16.0s)
+Attention                              epoch 4  train_loss=0.3857  train_acc=0.8591  val_acc=0.8554  (14.3s)
+Attention                              epoch 5  train_loss=0.3628  train_acc=0.8664  val_acc=0.8652  (14.4s)
+Attention                              TEST acc=0.8604
+Attention (no positional embedding)    epoch 1  train_loss=0.8294  train_acc=0.7139  val_acc=0.7992  (15.3s)
+Attention (no positional embedding)    epoch 2  train_loss=0.5401  train_acc=0.8055  val_acc=0.8034  (17.9s)
+Attention (no positional embedding)    epoch 3  train_loss=0.4733  train_acc=0.8298  val_acc=0.8354  (16.3s)
+Attention (no positional embedding)    epoch 4  train_loss=0.4399  train_acc=0.8409  val_acc=0.8432  (16.8s)
+Attention (no positional embedding)    epoch 5  train_loss=0.4158  train_acc=0.8494  val_acc=0.8522  (14.4s)
+Attention (no positional embedding)    TEST acc=0.8425

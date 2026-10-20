@@ -1,0 +1,4 @@
+model,hand_flops,thop_default,thop_fastpath_off,thop_fastpath_off_mha_rule,default_over_hand,fixed_over_hand
+MLP,469504,469504,469504,469504,1.0,1.0
+CNN,2063488,2063488,2063488,2063488,1.0,1.0
+Attention,2329856,101632,1182976,2362624,0.0436,1.0141

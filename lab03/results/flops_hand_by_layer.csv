@@ -1,0 +1,21 @@
+model,layer,type,hand_flops
+MLP,Linear 784->256,Linear,401408
+MLP,Linear 256->128,Linear,65536
+MLP,Linear 128->10,Linear,2560
+CNN,"Conv2d 1->16, 3x3, 28x28 out",Conv2d,225792
+CNN,"Conv2d 16->32, 3x3, 14x14 out",Conv2d,1806336
+CNN,Linear 1568->10,Linear,31360
+Attention,Patch projection 49->64 (x16 patches),Linear,100352
+Attention,Encoder 1: QKV projections,Attention,393216
+Attention,Encoder 1: attention scores QK^T,Attention,32768
+Attention,Encoder 1: attention-weighted values AV,Attention,32768
+Attention,Encoder 1: output projection,Attention,131072
+Attention,Encoder 1: FFN 64->128,Linear,262144
+Attention,Encoder 1: FFN 128->64,Linear,262144
+Attention,Encoder 2: QKV projections,Attention,393216
+Attention,Encoder 2: attention scores QK^T,Attention,32768
+Attention,Encoder 2: attention-weighted values AV,Attention,32768
+Attention,Encoder 2: output projection,Attention,131072
+Attention,Encoder 2: FFN 64->128,Linear,262144
+Attention,Encoder 2: FFN 128->64,Linear,262144
+Attention,Head 64->10,Linear,1280
