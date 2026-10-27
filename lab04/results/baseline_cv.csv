@@ -1,0 +1,11 @@
+fold,features,n_features_in,accuracy,f1,precision,recall
+1,original 14 features,14,0.8516,0.6563,0.7361,0.592
+1,with derived features,16,0.8516,0.6567,0.7354,0.5933
+2,original 14 features,14,0.8532,0.658,0.7435,0.5902
+2,with derived features,16,0.857,0.6678,0.7519,0.6006
+3,original 14 features,14,0.8434,0.6331,0.7211,0.5642
+3,with derived features,16,0.8446,0.6395,0.7191,0.5758
+4,original 14 features,14,0.8529,0.6678,0.7271,0.6174
+4,with derived features,16,0.857,0.6777,0.7362,0.6278
+5,original 14 features,14,0.8525,0.6611,0.7347,0.6009
+5,with derived features,16,0.8539,0.6671,0.7342,0.6112

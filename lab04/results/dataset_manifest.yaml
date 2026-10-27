@@ -1,0 +1,81 @@
+dataset_hashes:
+  processed_train:
+    file: data/lab04/adult_processed_train.csv
+    rows: 34165
+    columns: 17
+    sha256: a93a7174fc8309317352c91227d759e62150aa488bfd37a18b40b1a910cb3338
+  processed_test:
+    file: data/lab04/adult_processed_test.csv
+    rows: 14653
+    columns: 17
+    sha256: e41edab38eff091a8a930672be3a1f073cd0bd7c5752b4a9e0755234f2dd1069
+  raw_snapshot:
+    file: data/lab04/adult_raw.csv
+    rows: 48842
+    columns: 15
+    sha256: 8f970e20c9991979ec0a9ccb65ce97543d678709a2c6f8ef23f7fb32f40adddc
+train_duplicates_dropped: 24
+environment:
+  python: 3.11.8
+  pandas: 2.2.2
+  scikit-learn: 1.5.0
+  numpy: 1.26.4
+  pyyaml: 6.0.3
+config:
+  seed: 42
+  dataset:
+    source: openml
+    name: adult
+    version: 2
+    expected_rows: 48842
+    expected_columns: 15
+    target_column: class
+    positive_label: '>50K'
+  schema:
+    types:
+      age: int
+      workclass: category
+      fnlwgt: int
+      education: category
+      education-num: int
+      marital-status: category
+      occupation: category
+      relationship: category
+      race: category
+      sex: category
+      capital-gain: int
+      capital-loss: int
+      hours-per-week: int
+      native-country: category
+      class: category
+    ranges:
+      age:
+      - 17
+      - 90
+      hours-per-week:
+      - 1
+      - 99
+      capital-gain:
+      - 0
+      - 99999
+      capital-loss:
+      - 0
+      - 4356
+    missing_token: '?'
+  split:
+    test_size: 0.3
+    stratify: true
+  cleaning:
+    numeric_impute: median
+    categorical_impute: most_frequent
+    clip_percentiles:
+    - 1
+    - 99
+    drop_train_duplicates: true
+  features:
+    age_offset: 16
+  baseline:
+    model: LogisticRegression
+    max_iter: 1000
+  label_audit:
+    sample_size: 50

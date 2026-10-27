@@ -1,0 +1,15 @@
+column,kind,train_imputed,train_fill_value,train_clip_low,train_clip_high,train_clipped_low,train_clipped_high,test_imputed,test_clipped_low,test_clipped_high
+age,numeric,0,37.0,17.0,74.0,0,302,0,0,143
+fnlwgt,numeric,0,178272.0,27035.2,509629.0,342,341,0,127,145
+education-num,numeric,0,10.0,3.0,16.0,240,0,0,88,0
+capital-gain,numeric,0,0.0,0.0,15024.0,0,255,0,0,136
+capital-loss,numeric,0,0.0,0.0,1980.0,0,340,0,0,151
+hours-per-week,numeric,0,40.0,8.0,80.0,311,226,0,144,92
+workclass,categorical,1923,Private,,,,,873,,
+education,categorical,0,HS-grad,,,,,0,,
+marital-status,categorical,0,Married-civ-spouse,,,,,0,,
+occupation,categorical,1933,Prof-specialty,,,,,873,,
+relationship,categorical,0,Husband,,,,,0,,
+race,categorical,0,White,,,,,0,,
+sex,categorical,0,Male,,,,,0,,
+native-country,categorical,590,United-States,,,,,267,,

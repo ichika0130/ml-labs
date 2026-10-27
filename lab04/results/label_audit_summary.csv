@@ -1,0 +1,22 @@
+check,groups,rows
+duplicate feature groups with conflicting labels (14 features),5,10
+"duplicate feature groups with conflicting labels (13 features, fnlwgt excluded)",1029,3873
+sample of 50: rows with at least one rule flag,,0
+sample of 50: age_out_of_range,,0
+sample of 50: hours-per-week_out_of_range,,0
+sample of 50: capital-gain_out_of_range,,0
+sample of 50: capital-loss_out_of_range,,0
+sample of 50: education_num_mismatch,,0
+sample of 50: husband_not_male,,0
+sample of 50: wife_not_female,,0
+sample of 50: degree_too_young,,0
+sample of 50: gain_and_loss_both,,0
+full dataset: age_out_of_range,,0
+full dataset: hours-per-week_out_of_range,,0
+full dataset: capital-gain_out_of_range,,0
+full dataset: capital-loss_out_of_range,,0
+full dataset: education_num_mismatch,,0
+full dataset: husband_not_male,,1
+full dataset: wife_not_female,,3
+full dataset: degree_too_young,,3
+full dataset: gain_and_loss_both,,0

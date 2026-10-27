@@ -1,0 +1,16 @@
+column,expected_type,observed_dtype,type_ok,type_violations,missing_nan,missing_question_mark,missing_total,missing_pct,n_unique,range,below_min,above_max,observed_min,observed_max
+age,int,int64,True,0,0,0,0,0.0,74,17-90,0,0,17,90
+workclass,category,category,True,0,2799,0,2799,5.73,8,,,,,
+fnlwgt,int,int64,True,0,0,0,0,0.0,28523,,,,,
+education,category,category,True,0,0,0,0,0.0,16,,,,,
+education-num,int,int64,True,0,0,0,0,0.0,16,,,,,
+marital-status,category,category,True,0,0,0,0,0.0,7,,,,,
+occupation,category,category,True,0,2809,0,2809,5.75,14,,,,,
+relationship,category,category,True,0,0,0,0,0.0,6,,,,,
+race,category,category,True,0,0,0,0,0.0,5,,,,,
+sex,category,category,True,0,0,0,0,0.0,2,,,,,
+capital-gain,int,int64,True,0,0,0,0,0.0,123,0-99999,0,0,0,99999
+capital-loss,int,int64,True,0,0,0,0,0.0,99,0-4356,0,0,0,4356
+hours-per-week,int,int64,True,0,0,0,0,0.0,96,1-99,0,0,1,99
+native-country,category,category,True,0,857,0,857,1.75,41,,,,,
+class,category,category,True,0,0,0,0,0.0,2,,,,,

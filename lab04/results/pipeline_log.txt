@@ -1,0 +1,23 @@
+[ingest] fetch_openml(name='adult', version=2): 48842 rows, 15 columns
+[ingest] expected 48842 rows and 15 columns: OK
+[ingest] raw snapshot adult_raw.csv sha256=8f970e20c9991979ec0a9ccb65ce97543d678709a2c6f8ef23f7fb32f40adddc
+[validate] columns missing=[] extra=[]
+[validate] type failures: none
+[validate] range violations: 0
+[validate] missing values: workclass=2799, occupation=2809, native-country=857
+[validate] labels: {'<=50K': 37155, '>50K': 11687}; unexpected: none
+[validate] exact duplicate rows: 52; duplicate feature rows: 57
+[validate] no rows dropped
+[split] train 34189 / test 14653 (stratified, seed 42); positive share train 0.2393, test 0.2393
+[split] test rows that exactly duplicate a train row (kept, reported only): 24
+[clean] dropped 24 exact duplicate rows from train; test untouched
+[clean] preprocessor fitted on train only, saved to results/preprocessor.joblib
+[baseline] original 14 features: accuracy 0.854, F1 0.6601
+[baseline] with derived features: accuracy 0.8578, F1 0.6696
+[baseline-cv] accuracy: derived features better in 4/5 folds, mean change +0.0021 (min +0.0000, max +0.0041)
+[baseline-cv] f1: derived features better in 5/5 folds, mean change +0.0065 (min +0.0004, max +0.0099)
+[audit] conflicting duplicates, 14 features: 5 groups / 10 rows; fnlwgt excluded: 1029 groups / 3873 rows
+[audit] 50-row sample: 0 rows flagged by rules
+[hash] processed_train: a93a7174fc8309317352c91227d759e62150aa488bfd37a18b40b1a910cb3338
+[hash] processed_test: e41edab38eff091a8a930672be3a1f073cd0bd7c5752b4a9e0755234f2dd1069
+[hash] raw_snapshot: 8f970e20c9991979ec0a9ccb65ce97543d678709a2c6f8ef23f7fb32f40adddc
