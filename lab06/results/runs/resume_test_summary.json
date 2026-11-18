@@ -1,0 +1,9 @@
+{
+  "run": "resume_test",
+  "test_loss": 0.2977,
+  "test_acc": 0.8919,
+  "final_val_acc": 0.898,
+  "mean_samples_per_s": 5363.1,
+  "peak_rss_mb": 569.6,
+  "train_seconds": 51.4
+}

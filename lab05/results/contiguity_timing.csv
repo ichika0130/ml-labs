@@ -1,0 +1,6 @@
+operation,contiguous_ms,non_contiguous_view_ms,slowdown
+elementwise t*2 + 1,35.675,31.365,0.88
+sum over rows t.sum(dim=1),1.401,6.309,4.5
+flatten t.reshape(-1),0.001,45.001,40001.43
+matrix-vector t @ v,7.253,33.528,4.62
+making it contiguous: xt.contiguous(),,44.876,

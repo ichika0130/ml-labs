@@ -1,0 +1,6 @@
+epoch,segment,uninterrupted_val_loss,resumed_val_loss,uninterrupted_val_acc,resumed_val_acc,identical
+1,before interruption,0.4384,0.4384,0.8486,0.8486,True
+2,before interruption,0.3534,0.3534,0.8702,0.8702,True
+3,before interruption,0.3241,0.3241,0.8878,0.8878,True
+4,after resume,0.3096,0.3096,0.8856,0.8856,True
+5,after resume,0.2864,0.2864,0.898,0.898,True

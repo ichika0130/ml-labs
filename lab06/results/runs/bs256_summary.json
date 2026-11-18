@@ -1,0 +1,9 @@
+{
+  "run": "bs256",
+  "test_loss": 0.3132,
+  "test_acc": 0.8891,
+  "final_val_acc": 0.892,
+  "mean_samples_per_s": 3923.4,
+  "peak_rss_mb": 604.9,
+  "train_seconds": 70.1
+}

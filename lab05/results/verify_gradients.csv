@@ -1,0 +1,4 @@
+expression,n_inputs,graph_nodes,output_engine,output_torch,max_abs_diff_vs_torch,max_abs_diff_vs_numerical,pass
+((a*b + c)**2).relu().sum()  [manual],24,65,9.342459846301564,9.342459846301564,0.00e+00,1.01e-09,True
+(a*b + c).relu().sum()  [ReLU cuts],24,57,3.9831878031827044,3.9831878031827044,0.00e+00,2.94e-10,True
+(a*a*b + a*c).sum()  [value reused],24,65,5.51802525182915,5.51802525182915,0.00e+00,5.92e-10,True

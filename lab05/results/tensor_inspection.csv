@@ -1,0 +1,5 @@
+tensor,shape,dtype,stride,is_contiguous,shares_memory_with_x
+x,"(4096, 4096)",torch.float32,"(4096, 1)",True,True
+x.t(),"(4096, 4096)",torch.float32,"(1, 4096)",False,True
+x.t().contiguous(),"(4096, 4096)",torch.float32,"(4096, 1)",True,False
+"x[:, ::2]","(4096, 2048)",torch.float32,"(4096, 2)",False,True

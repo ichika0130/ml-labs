@@ -1,0 +1,9 @@
+{
+  "run": "bs64",
+  "test_loss": 0.2757,
+  "test_acc": 0.901,
+  "final_val_acc": 0.905,
+  "mean_samples_per_s": 3928.1,
+  "peak_rss_mb": 564.2,
+  "train_seconds": 70.3
+}

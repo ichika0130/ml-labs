@@ -1,0 +1,9 @@
+{
+  "run": "sgd_cosine",
+  "test_loss": 0.2491,
+  "test_acc": 0.9145,
+  "final_val_acc": 0.9138,
+  "mean_samples_per_s": 5866.9,
+  "peak_rss_mb": 583.4,
+  "train_seconds": 93.9
+}

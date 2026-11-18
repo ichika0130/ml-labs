@@ -1,0 +1,29 @@
+seed: 42
+run_name: bs256
+data:
+  batch_size: 256
+  num_workers: 0
+  val_size: 5000
+model:
+  name: CNN
+optimizer:
+  name: adam
+  lr: 0.001
+  momentum: 0.9
+  weight_decay: 0.0
+scheduler:
+  name: none
+  step_size: 3
+  gamma: 0.5
+  patience: 1
+  factor: 0.5
+train:
+  epochs: 5
+  grad_accum_steps: 1
+  stop_after_epoch: null
+  resume: false
+checkpoint:
+  dir: checkpoints
+mlflow:
+  experiment: lab06
+  tracking_dir: mlruns

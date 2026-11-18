@@ -1,0 +1,5 @@
+run,optimizer,scheduler,best_val_acc,final_val_acc,final_train_loss,test_acc_after_10_epochs,final_lr
+adam_step,adam,step,0.907,0.907,0.2196,0.9014,0.000125
+adam_cosine,adam,cosine,0.909,0.9062,0.214,0.9014,2.4471741852423235e-05
+adam_plateau,adam,plateau,0.9064,0.9034,0.2082,0.8985,0.001
+sgd_cosine,sgd,cosine,0.9154,0.9138,0.157,0.9145,0.001223587092621162

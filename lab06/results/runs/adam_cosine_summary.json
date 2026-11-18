@@ -1,0 +1,9 @@
+{
+  "run": "adam_cosine",
+  "test_loss": 0.2699,
+  "test_acc": 0.9014,
+  "final_val_acc": 0.9062,
+  "mean_samples_per_s": 5007.7,
+  "peak_rss_mb": 574.1,
+  "train_seconds": 110.4
+}

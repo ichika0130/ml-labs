@@ -1,0 +1,9 @@
+{
+  "run": "accum64x4",
+  "test_loss": 0.3133,
+  "test_acc": 0.8885,
+  "final_val_acc": 0.892,
+  "mean_samples_per_s": 5468.3,
+  "peak_rss_mb": 563.2,
+  "train_seconds": 50.4
+}

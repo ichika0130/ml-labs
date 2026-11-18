@@ -1,0 +1,9 @@
+{
+  "run": "bs512",
+  "test_loss": 0.3428,
+  "test_acc": 0.8782,
+  "final_val_acc": 0.8818,
+  "mean_samples_per_s": 3409.2,
+  "peak_rss_mb": 728.8,
+  "train_seconds": 80.7
+}

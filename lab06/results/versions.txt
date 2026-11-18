@@ -1,0 +1,26 @@
+Python 3.10.12 (Linux-6.8.0-138-generic-aarch64-with-glibc2.35)
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.0
+scipy==1.15.3
+matplotlib==3.9.0
+seaborn: NOT INSTALLED
+torch==2.3.1
+torchvision==0.18.1
+torchinfo: NOT INSTALLED
+thop: NOT INSTALLED
+onnx: NOT INSTALLED
+onnxruntime: NOT INSTALLED
+mlflow==2.14.1
+memory-profiler: NOT INSTALLED
+psutil: NOT INSTALLED
+codecarbon: NOT INSTALLED
+fastapi: NOT INSTALLED
+uvicorn: NOT INSTALLED
+pytest: NOT INSTALLED
+httpx: NOT INSTALLED
+locust: NOT INSTALLED
+requests==2.34.2
+pyarrow==15.0.2
+joblib==1.6.0
+tqdm: NOT INSTALLED

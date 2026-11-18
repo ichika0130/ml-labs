@@ -1,0 +1,9 @@
+{
+  "run": "adam_plateau",
+  "test_loss": 0.2762,
+  "test_acc": 0.8985,
+  "final_val_acc": 0.9034,
+  "mean_samples_per_s": 5546.2,
+  "peak_rss_mb": 589.7,
+  "train_seconds": 99.3
+}

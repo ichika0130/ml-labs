@@ -1,0 +1,9 @@
+{
+  "run": "baseline",
+  "test_loss": 0.2977,
+  "test_acc": 0.8919,
+  "final_val_acc": 0.898,
+  "mean_samples_per_s": 4362.2,
+  "peak_rss_mb": 580.4,
+  "train_seconds": 63.3
+}

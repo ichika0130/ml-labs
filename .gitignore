@@ -17,3 +17,6 @@ emissions.csv
 .DS_Store
 .vscode/
 .idea/
+
+# Training checkpoints (Lab 6)
+checkpoints/

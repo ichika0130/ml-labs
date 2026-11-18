@@ -1,0 +1,9 @@
+{
+  "run": "bs32",
+  "test_loss": 0.2753,
+  "test_acc": 0.9024,
+  "final_val_acc": 0.9014,
+  "mean_samples_per_s": 2940.9,
+  "peak_rss_mb": 564.4,
+  "train_seconds": 95.6
+}

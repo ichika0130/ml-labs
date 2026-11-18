@@ -1,0 +1,6 @@
+phase,profiler_cpu_ms,profiler_share,wall_ms,wall_share
+data_loading,5545,0.356,5548,0.356
+forward,3885,0.249,3894,0.250
+backward,5913,0.380,5923,0.380
+optimizer_step,233,0.015,241,0.015
+total,15575,1.000,15605,1.000

@@ -1,0 +1,9 @@
+{
+  "run": "adam_step",
+  "test_loss": 0.2712,
+  "test_acc": 0.9014,
+  "final_val_acc": 0.907,
+  "mean_samples_per_s": 4393.7,
+  "peak_rss_mb": 577.8,
+  "train_seconds": 126.2
+}

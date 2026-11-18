@@ -1,0 +1,42 @@
+/sessions/rcw-01bt4bt6lbhzcepgadbkxwmx/venv/lib/python3.10/site-packages/torch/profiler/profiler.py:405: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2026-11-18 16:27:59 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:28:01 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:28:01 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:28:14 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:28:16 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:28:16 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:28:31 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:28:32 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:28:32 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:28:46 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:28:48 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:28:48 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:29:01 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:29:03 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:29:03 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:29:16 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:29:18 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:29:18 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:29:31 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:29:33 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:29:33 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:29:46 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:29:48 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:29:48 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:30:03 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:30:05 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:30:05 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:30:20 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:30:22 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:30:22 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+STAGE:2026-11-18 16:30:36 8:8 ActivityProfilerController.cpp:314] Completed Stage: Warm Up
+STAGE:2026-11-18 16:30:37 8:8 ActivityProfilerController.cpp:320] Completed Stage: Collection
+STAGE:2026-11-18 16:30:37 8:8 ActivityProfilerController.cpp:324] Completed Stage: Post Processing
+phase,profiler_cpu_ms,profiler_share,wall_ms,wall_share
+data_loading,5545,0.356,5548,0.356
+forward,3885,0.249,3894,0.250
+backward,5913,0.380,5923,0.380
+optimizer_step,233,0.015,241,0.015
+total,15575,1.000,15605,1.000
+430 steps, epoch wall time 158.6s (with profiler overhead)

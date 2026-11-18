@@ -1,0 +1,40 @@
+# Autograd graph of SmallMLP(x).sum(), from loss.grad_fn back to the leaves
+SumBackward0
+  SigmoidBackward0
+    AddmmBackward0
+      AccumulateGrad
+      ReluBackward0
+        AddmmBackward0
+          AccumulateGrad
+          TBackward0
+            AccumulateGrad
+      TBackward0
+        AccumulateGrad
+
+# torch.fx graph (the forward computation as recorded operations)
+graph():
+    %x : [num_users=1] = placeholder[target=x]
+    %net_0 : [num_users=1] = call_module[target=net.0](args = (%x,), kwargs = {})
+    %net_1 : [num_users=1] = call_module[target=net.1](args = (%net_0,), kwargs = {})
+    %net_2 : [num_users=1] = call_module[target=net.2](args = (%net_1,), kwargs = {})
+    %net_3 : [num_users=1] = call_module[target=net.3](args = (%net_2,), kwargs = {})
+    return net_3
+
+# torch.jit.trace graph (inlined)
+graph(%self.1 : __torch__.SmallMLP,
+      %x : Float(4, 2, strides=[2, 1], requires_grad=0, device=cpu)):
+  %net : __torch__.torch.nn.modules.container.Sequential = prim::GetAttr[name="net"](%self.1)
+  %_3 : __torch__.torch.nn.modules.activation.Sigmoid = prim::GetAttr[name="3"](%net)
+  %_2 : __torch__.torch.nn.modules.linear.___torch_mangle_0.Linear = prim::GetAttr[name="2"](%net)
+  %_1 : __torch__.torch.nn.modules.activation.ReLU = prim::GetAttr[name="1"](%net)
+  %_0 : __torch__.torch.nn.modules.linear.Linear = prim::GetAttr[name="0"](%net)
+  %bias.1 : Tensor = prim::GetAttr[name="bias"](%_0)
+  %weight.1 : Tensor = prim::GetAttr[name="weight"](%_0)
+  %input.1 : Float(4, 8, strides=[8, 1], requires_grad=1, device=cpu) = aten::linear(%x, %weight.1, %bias.1), scope: __module.net/__module.net.0 # /sessions/rcw-01bt4bt6lbhzcepgadbkxwmx/venv/lib/python3.10/site-packages/torch/nn/modules/linear.py:116:0
+  %input.3 : Float(4, 8, strides=[8, 1], requires_grad=1, device=cpu) = aten::relu(%input.1), scope: __module.net/__module.net.1 # /sessions/rcw-01bt4bt6lbhzcepgadbkxwmx/venv/lib/python3.10/site-packages/torch/nn/functional.py:1500:0
+  %bias : Tensor = prim::GetAttr[name="bias"](%_2)
+  %weight : Tensor = prim::GetAttr[name="weight"](%_2)
+  %input : Float(4, 1, strides=[1, 1], requires_grad=1, device=cpu) = aten::linear(%input.3, %weight, %bias), scope: __module.net/__module.net.2 # /sessions/rcw-01bt4bt6lbhzcepgadbkxwmx/venv/lib/python3.10/site-packages/torch/nn/modules/linear.py:116:0
+  %15 : Float(4, 1, strides=[1, 1], requires_grad=1, device=cpu) = aten::sigmoid(%input), scope: __module.net/__module.net.3 # /sessions/rcw-01bt4bt6lbhzcepgadbkxwmx/venv/lib/python3.10/site-packages/torch/nn/modules/activation.py:292:0
+  return (%15)
+

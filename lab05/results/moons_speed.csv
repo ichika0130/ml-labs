@@ -1,0 +1,3 @@
+implementation,samples,steps,initial_loss,final_loss,train_accuracy,median_total_s,median_per_step_ms,runs_s,graph_nodes_per_step,max_loss_curve_diff,speedup_vs_engine
+engine,100,400,0.570161,0.052897,1.0,27.6519,69.13,28.4743 28.1364 27.3064 27.6126 27.6519,9436,5.00e-16,1.0
+pytorch,100,400,0.570161,0.052897,1.0,0.0554,0.138,0.0656 0.0529 0.0516 0.0554 0.0562,,5.00e-16,499.2

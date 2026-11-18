@@ -1,0 +1,23 @@
+One epoch (430 steps), batch 128, num_workers 0, wall time 158.6s with profiler on
+
+operator                                       self CPU ms   share     calls
+aten::convolution_backward                            5002   32.6%       860
+enumerate(DataLoader)#_SingleProcessDataLoade         4187   27.3%       431
+aten::mkldnn_convolution                              1917   12.5%       860
+aten::max_pool2d_with_indices                         1150    7.5%       860
+aten::copy_                                            446    2.9%    286610
+aten::_to_copy                                         278    1.8%    175320
+aten::threshold_backward                               259    1.7%       860
+aten::any                                              127    0.8%     55000
+aten::to                                               127    0.8%    396186
+aten::max_pool2d_with_indices_backward                 121    0.8%       860
+aten::div                                              118    0.8%     57580
+aten::clone                                            118    0.8%     55860
+Optimizer.step#Adam.step                               117    0.8%       430
+aten::clamp_min                                        111    0.7%       860
+aten::fill_                                            111    0.7%      1720
+aten::mm                                               109    0.7%       860
+aten::eq                                               104    0.7%     55000
+aten::empty_strided                                     91    0.6%    230762
+aten::select                                            83    0.5%    110000
+aten::addmm                                             68    0.4%       430

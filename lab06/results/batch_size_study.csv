@@ -1,0 +1,6 @@
+batch_size,run,samples_per_s,samples_per_s_during_5_epoch_run,peak_rss_mb,optimizer_steps_per_epoch,final_val_acc,test_acc_after_5_epochs,train_seconds_5_epochs
+32,bs32,5271.3,2940.9,564.4,1719,0.9014,0.9024,95.6
+64,bs64,5613.5,3928.1,564.2,860,0.905,0.901,70.3
+128,baseline,5794.6,4362.2,580.4,430,0.898,0.8919,63.3
+256,bs256,5397.8,3923.4,604.9,215,0.892,0.8891,70.1
+512,bs512,4364.2,3409.2,728.8,108,0.8818,0.8782,80.7

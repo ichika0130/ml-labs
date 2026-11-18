@@ -1,0 +1,7 @@
+{'num_workers': 0, 'data_only_s': 3.23, 'train_epoch_s': 12.21, 'train_samples_per_s': 4504.2, 'data_samples_per_s': 17026.6}
+{'num_workers': 1, 'data_only_s': 3.73, 'train_epoch_s': 12.52, 'train_samples_per_s': 4393.3, 'data_samples_per_s': 14726.9}
+{'num_workers': 2, 'data_only_s': 1.77, 'train_epoch_s': 15.93, 'train_samples_per_s': 3451.8, 'data_samples_per_s': 31126.3}
+{'num_workers': 4, 'data_only_s': 1.21, 'train_epoch_s': 18.58, 'train_samples_per_s': 2960.7, 'data_samples_per_s': 45359.6}
+  warnings.warn(_create_warning_msg(
+{'num_workers': 8, 'data_only_s': 2.3, 'train_epoch_s': 20.33, 'train_samples_per_s': 2706.0, 'data_samples_per_s': 23948.0}
+CPU cores visible: 4, torch threads: 4
